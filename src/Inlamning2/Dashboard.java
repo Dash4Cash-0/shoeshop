@@ -23,7 +23,6 @@ public class Dashboard {
         user = new UserLogin(repo.getUserNameInput(), repo.getPasswordInput());
         user.checkLoginCredentials();
         customer.setCustomerId(user.getUserName());
-        order.setCustomerOrderId(customer.getCustomerId());
         int sum = 0;
 
         Thread.sleep(500);
@@ -68,6 +67,7 @@ public class Dashboard {
                     }
                 }else{
                     cart = new Cart();
+                    order.setCustomerOrderId(customer.getCustomerId());
                     cart.addToCart(customer.getCustomerId(), order.getCustomerOrderId(), shoes.getShoeId());
                     sum += cart.calculateTotal(shoes.getShoeId());
                     System.out.println("You have successfully added the shoe to your cart\n");
