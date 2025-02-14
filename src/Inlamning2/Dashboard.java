@@ -91,7 +91,7 @@ public class Dashboard {
                     Thread.sleep(300);
                     break;
                 }else if(keepShopping.equals("y")) {
-                    System.out.println("Press enter to continue or type pay to go to payment");
+                    System.out.println("Continue shopping..");
                 }
             }
 
